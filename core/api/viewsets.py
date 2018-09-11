@@ -16,7 +16,7 @@ class PontoTuristicoViewSet(ModelViewSet):
     permission_classes = (IsAuthenticated,)  # IsAdminUser
     authentication_classes = (TokenAuthentication,)
     search_fields = ('nome', 'descricao', 'endereco__linha1')
-    lookup_field = 'nome'
+    # lookup_field = 'nome'
 
     def get_queryset(self):
         id = self.request.query_params.get('id', None)
