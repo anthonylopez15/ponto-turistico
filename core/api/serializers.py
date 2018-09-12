@@ -6,8 +6,8 @@ from atracoes.api.serializers import AtracaoSerializer
 
 
 class PontoTuristicoSerializer(ModelSerializer):
-    endereco = EnderecoSerializer()
     atracao = AtracaoSerializer(many=True)
+    endereco = EnderecoSerializer(read_only=True)
     descricao_completa = SerializerMethodField()
 
     class Meta:
