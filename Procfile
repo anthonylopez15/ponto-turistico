@@ -1,1 +1,1 @@
-web: gunicorn ponto-turistico.wsgi --log-file -
+web: gunicorn ponto_turistico.wsgi --log-file -
